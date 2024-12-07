@@ -1,0 +1,156 @@
+/*en el header podemos hacerlo con flex si es mas comodo
+el tema del navegador y demás*/
+* {
+  margin: 5px;
+  padding: 0;
+  box-sizing: border-box;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+
+  img {
+    width: 15%;
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+  }
+  nav ul a {
+    text-decoration: none;
+    color: black;
+  }
+  .enlaceSub {
+    background-color: blue;
+    padding: 5px;
+    border-radius: 5px;
+  }
+}
+
+.primeraSeccion article img {
+  width: 85%;
+}
+.primeraSeccion {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 50px;
+}
+
+.primeraSeccion button {
+  background-color: blue;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.titulo {
+  text-align: center;
+  margin: 35px;
+}
+.segundaSeccion {
+  img {
+    width: 90%;
+  }
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+.segundaSeccion article {
+  box-shadow: 10px 6px 37px -13px black;
+}
+.terceraSeccion {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: auto;
+  text-align: center;
+  justify-items: center;
+  gap: 10px;
+  button {
+    width: 30%;
+    background-color: blue;
+    border-radius: 5px;
+  }
+}
+.footer img {
+  width: 25%;
+}
+.footer ul {
+  list-style: none;
+}
+.footer a {
+  text-decoration: none;
+  color: black;
+}
+.footer {
+  background-color: crimson;
+  font-size: small;
+  margin-left: 0;
+  margin-top: 0;
+  padding: 10px;
+  display: grid;
+  margin-top: 50px;
+  grid-template-columns: auto auto auto auto;
+}
+.footer div a img {
+  width: 5%;
+}
+@media (max-width: 600px) {
+  /* Ajusta el header para que el logotipo y el menú estén en una sola columna */
+  header {
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+    img {
+      width: 100%;
+    }
+  }
+
+  header nav ul {
+    display: grid;
+    gap: 10px;
+    justify-items: center;
+  }
+
+  /* Primera sección en una sola columna */
+  .primeraSeccion {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    text-align: center;
+  }
+
+  /* Ajusta el título */
+  .titulo {
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  /* Segunda sección: cada elemento en una fila */
+  .segundaSeccion {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0 10px;
+  }
+
+  /* Tercera sección centrada */
+  .terceraSeccion {
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  /* Footer en una sola columna */
+  .footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .footer div,
+  .footer ul {
+    display: grid;
+    justify-items: center;
+  }
+}

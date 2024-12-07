@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>menu desplegable</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav id="main-nav">
+        <h3>Menu desplegable</h3>
+        <button id="hamburger" onclick="toggleMenu()">☰</button>
+        <ul>
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Acerca de...</a></li>
+          <li>
+            <a class="seDespliega">Servicios ></a>
+            <ul class="desplegable">
+              <li><a href="#">Diseño</a></li>
+              <li><a href="#">Desarrollo</a></li>
+              <li><a href="#">SEO</a></li>
+              <li><a href="#">Créditos</a></li>
+            </ul>
+          </li>
+          <li>
+            <a>Planes ></a>
+            <ul class="desplegable">
+              <li><a href="#">Gratuito</a></li>
+              <li><a href="#">Básico</a></li>
+              <li><a href="#">Empresarial</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contacto</a></li>
+          <li><a class="login">login</a></li>
+          <li><a class="register">register</a></li>
+        </ul>
+      </nav>
+    </header>
+    <script>
+      function toggleMenu() {
+        const nav = document.getElementById("main-nav");
+        nav.classList.toggle("open");
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  background-color: black;
+  color: aliceblue;
+  padding: 20px;
+}
+header nav {
+  display: flex;
+  flex-direction: row;
+}
+header nav ul {
+  display: flex;
+  gap: 10px;
+  list-style: none;
+}
+header nav ul a {
+  text-decoration: none;
+  color: aliceblue;
+}
+header nav ul li ul {
+  /* Que no se muestren los submenus */
+  display: none;
+}
+header nav ul li:hover .desplegable {
+  display: block;
+}
+
+.register {
+  padding: 10px;
+  border: solid;
+  border-color: blue;
+}
+.login {
+  background-color: blue;
+  padding: 10px;
+}
+#hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+@media screen and (max-width: 650px) {
+  /* Mostrar botón de hamburguesa y ocultar menú */
+  #hamburger {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  #main-nav ul {
+    display: none;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  #main-nav.open ul {
+    display: flex;
+  }
+
+  #main-nav ul li {
+    text-align: center;
+    padding: 10px;
+    border-bottom: 1px solid #333;
+  }
+  #main-nav ul li ul.desplegable {
+    display: none;
+    flex-direction: column;
+    background-color: #333;
+    padding: 10px;
+  }
+
+  /* Mostrar submenú al hacer hover */
+  #main-nav ul li:hover > ul.desplegable {
+    display: flex;
+  }
+
+  .login,
+  .register {
+    margin: 10px;
+    width: calc(100% - 20px);
+    text-align: center;
+  }
+}

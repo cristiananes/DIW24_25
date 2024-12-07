@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ventanas Modales</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Ejemplo de Ventana Modal</h1>
+    <button id="abrirModalInformativa">Abrir Modal Informativa</button>
+    <button id="abrirModalConfirmacion">Abrir Modal Confirmación</button>
+    <button id="abrirModalFormulario">Abrir Modal Formulario</button>
+
+    <!-- Modal Informativa -->
+    <div id="modalInformativa" class="modal">
+      <div class="contenido-modal">
+        <span class="cerrar">&times;</span>
+        <p>Esta es una ventana modal informativa.</p>
+        <button id="cerrarModalInformativa">Cerrar</button>
+      </div>
+    </div>
+
+    <!-- Modal Confirmación -->
+    <div id="modalConfirmacion" class="modal">
+      <div class="contenido-modal">
+        <span class="cerrar">&times;</span>
+        <p>¿Estás seguro de que quieres continuar?</p>
+        <button id="botonCancelar">Cancelar</button>
+        <button id="botonContinuar">Continuar</button>
+      </div>
+    </div>
+
+    <!-- Modal Formulario -->
+    <div id="modalFormulario" class="modal">
+      <div class="contenido-modal">
+        <span class="cerrar">&times;</span>
+
+        <form id="formulario">
+          <label for="nombre"
+            >Nombre:
+            <input type="text" id="nombre" name="nombre" required />
+          </label>
+          <label for="contrasena"
+            >Contraseña:
+            <input type="password" id="contrasena" name="contrasena" required />
+          </label>
+          <label for="confirmarContrasena"
+            >Confirmar Contraseña:
+            <input
+              type="password"
+              id="confirmarContrasena"
+              name="confirmarContrasena"
+              required
+            />
+          </label>
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

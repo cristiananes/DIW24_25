@@ -1,0 +1,125 @@
+:root {
+  /* Paleta de colores */
+  --color-primario: #d6c6e8; /* Color principal (complementario) */
+  --color-secundario-claro: #9c90c6; /* Color secundario claro */
+  --color-secundario-oscuro: #06060e; /* Color secundario oscuro */
+
+  /* Fuentes */
+  --fuente-principal: "Montserrat", sans-serif;
+  --fuente-secundaria: "Roboto Slab", serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+header {
+  background-color: var(--color-secundario-oscuro);
+  color: var(--color-primario);
+  padding: 10px 0;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+header h1 {
+  font-size: 24px;
+  text-transform: uppercase;
+  color: var(--color-secundario-claro);
+}
+
+nav a {
+  color: var(--color-primario);
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 16px;
+  font-size: x-small;
+}
+
+.blog-section {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.blog-section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 28px;
+}
+
+.blog-post {
+  display: flex;
+  margin-bottom: 30px;
+  background-color: var(--color-secundario-claro);
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.blog-post img {
+  width: 1fr;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+
+.blog-info h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.blog-info p {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.blog-info span {
+  color: #95ff00;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer .footer-content {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--color-primario);
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Open Sans", sans-serif;
+  color: var(--color-secundario-oscuro);
+}
+@media screen and (max-width: 600px) {
+  .blog-post {
+    flex-direction: column;
+  }
+  header nav {
+    display: none;
+  }
+}

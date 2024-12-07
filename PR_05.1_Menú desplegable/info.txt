@@ -1,0 +1,3 @@
+Con el navegador chrome no se porque se salia el contenido del contenedor del nav pero con mas navegadores no pasa.
+No tiene motivo para que pase por lo que estuvimos comprobando osea que sigo la practica avanzando con el edge.
+Igualmente con el media screen no deberia haber este problema es por puntuarlo simplemente

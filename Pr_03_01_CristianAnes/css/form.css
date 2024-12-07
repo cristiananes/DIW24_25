@@ -1,0 +1,103 @@
+:root {
+  /* Paleta de colores */
+  --color-primario: #d6c6e8; /* Color principal (complementario) */
+  --color-secundario-claro: #9c90c6; /* Color secundario claro */
+  --color-secundario-oscuro: #06060e; /* Color secundario oscuro */
+
+  /* Fuentes */
+  --fuente-principal: "Montserrat", sans-serif;
+  --fuente-secundaria: "Roboto Slab", serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: var(--color-secundario-oscuro);
+  color: var(--color-primario);
+  padding: 15px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+}
+header h1 {
+  color: var(--color-primario);
+}
+
+nav a {
+  color: var(--color-secundario-claro);
+  margin: 0 15px;
+  text-decoration: none;
+  font-size: x-small;
+}
+
+.contact-section {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: var(--color-secundario-claro);
+  border-radius: 8px;
+}
+.contact-section h2 {
+  text-align: center;
+}
+
+.contact-section img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+form {
+  margin-top: 20px;
+  border-color: #333;
+}
+form h3 {
+  text-align: center;
+}
+
+form div {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: var(--color-secundario-oscuro);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--color-primario);
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Open Sans", sans-serif;
+  color: var(--color-secundario-oscuro);
+}

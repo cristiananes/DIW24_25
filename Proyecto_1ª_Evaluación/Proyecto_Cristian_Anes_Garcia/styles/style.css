@@ -1,0 +1,45 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+@import url("https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap");
+/* Fuente descargada configurada de manera normal */
+@font-face {
+  font-family: "roboto";
+  src: url(/Proyecto_Cristian_Anes_Garcia/fonts/Roboto-Regular.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+/* Fuente descargada en bold para titulos y demás */
+@font-face {
+  font-family: "roboto";
+  src: url(/Proyecto_Cristian_Anes_Garcia/fonts/Roboto-Bold.ttf);
+  font-weight: bold;
+  font-style: bold;
+}
+
+--color_princila:root {
+  /* Colores en modo claro:  */
+  --color-principal: #e6e8e3;
+  --color-secundario: #bec3bc;
+  --color-complementario: #65727a;
+
+  /* Colores en modo oscuro */
+  --color-principal-oscuro: #65727a;
+  --color-secundario-oscuro: #8f9a9c;
+  --color-complementario-oscuro: #e6e8e3;
+
+  /* La fuente importada con @import */
+  --fuente-principal: "Parkinsans", sans-serif;
+  --fuente-secundaria: "roboto";
+  --tamanio-fuente: 12px;
+  /*  
+    La paleta de colores completa por si hiciese falta más adelante:
+    https://paletadecolores.com.mx/paleta/e6e8e3/d7dacf/bec3bc/8f9a9c/65727a/
+    #e6e8e3
+    #d7dacf
+    #bec3bc
+    #8f9a9c
+    #65727a */
+}
