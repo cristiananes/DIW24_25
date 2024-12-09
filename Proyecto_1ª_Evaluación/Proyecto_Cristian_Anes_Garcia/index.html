@@ -5,8 +5,185 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="styles/style.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
+    <header>
+      <nav id="main-nav">
+        <h3>Cristian Anes García</h3>
+        <img src="img/IMG_7276-min.jpg" alt="" />
+        <button id="hamburger" onclick="toggleMenu()">☰</button>
+        <ul>
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Sobre mi</a></li>
+          <li>
+            <a class="seDespliega">Proyectos ></a>
+            <ul class="desplegable">
+              <li><a href="#">Consultas Medicas</a></li>
+              <li><a href="#">Quiz</a></li>
+              <li><a href="#">Camisetas Lenguajes</a></li>
+              <li><a href="#">Diario de viajes</a></li>
+            </ul>
+          </li>
+          <li>
+            <a class="seDespliega">Datos de interés ></a>
+            <ul class="desplegable">
+              <li><a href="#">Formación</a></li>
+              <li><a href="#">Experiencia</a></li>
+              <li><a href="#">Diplomas</a></li>
+              <li><a href="#">Disponibilidad</a></li>
+            </ul>
+          </li>
+
+          <li><a href="#">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="inicio">
+        <div class="intro-contenido">
+          <h1 id="bienvenida"></h1>
+          <p>
+            Explora mis proyectos y descubre soluciones creativas para el
+            desarrollo web.
+          </p>
+          <img
+            src="https://concepto.de/wp-content/uploads/2020/08/Programacion-informatica-scaled-e1724960033513.jpg"
+            alt=""
+          />
+        </div>
+      </section>
+      <section id="sobre-mi">
+        <div class="sobre-contenido">
+          <div class="sobre-texto">
+            <h2>Sobre mí</h2>
+            <p>
+              Soy un apasionado del desarrollo web con experiencia en
+              tecnologías como HTML, CSS, JavaScript y frameworks modernos.
+              Siempre busco soluciones innovadoras para proyectos desafiantes.
+            </p>
+            <p>Soy FullStack (Domino tanto el FrontEnd como el BackEnd)</p>
+            <p>
+              Mi objetivo es construir aplicaciones que sean funcionales,
+              atractivas y optimizadas para ofrecer la mejor experiencia de
+              usuario.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section id="skills">
+        <h2>Habilidades</h2>
+        <div class="skills-grid">
+          <div class="skill">
+            <i class="fab fa-html5"></i>
+            <p>HTML</p>
+          </div>
+          <div class="skill">
+            <i class="fab fa-css3-alt"></i>
+            <p>CSS</p>
+          </div>
+          <div class="skill">
+            <i class="fab fa-git-alt"></i>
+            <p>GIT</p>
+          </div>
+          <div class="skill">
+            <i class="fab fa-js-square"></i>
+            <p>JavaScript</p>
+          </div>
+          <div class="skill">
+            <i class="fab fa-react"></i>
+            <p>React</p>
+          </div>
+          <div class="skill">
+            <i class="fab fa-node-js"></i>
+            <p>Node.js</p>
+          </div>
+          <div class="skill">
+            <i class="fas fa-leaf"></i>
+            <p>Spring Boot</p>
+          </div>
+          <div class="skill">
+            <i class="fab fa-java"></i>
+            <p>Java</p>
+          </div>
+        </div>
+      </section>
+      <section id="proyectos">
+        <h2>Proyectos Destacados</h2>
+        <div class="proyectos-grid">
+          <div class="proyecto">
+            <h3>Consultas Médicas</h3>
+            <p>Gestión de consultas médicas con funcionalidades avanzadas.</p>
+            <a
+              href="https://github.com/cristiananes/PBF_ConsultasMedicas"
+              target="_blank"
+              class="btn"
+              >Ver Proyecto</a
+            >
+          </div>
+          <div class="proyecto">
+            <h3>Quiz</h3>
+            <p>Juego de preguntas y respuestas para aprender y divertirse.</p>
+            <a
+              href="https://github.com/JoshbaSov/HABProyectoJuegoPreguntas"
+              target="_blank"
+              class="btn"
+              >Ver Proyecto</a
+            >
+          </div>
+          <div class="proyecto">
+            <h3>Camisetas Lenguajes</h3>
+            <p>
+              Catálogo interactivo de camisetas sobre lenguajes de programación.
+            </p>
+            <a
+              href="https://camisetaslenguajes.netlify.app/"
+              target="_blank"
+              class="btn"
+              >Ver Proyecto</a
+            >
+          </div>
+          <div class="proyecto">
+            <h3>Diario de Viajes</h3>
+            <p>Registro de viajes con notas y ubicaciones.</p>
+            <a
+              href="https://github.com/cristiananes/jsb40rt/tree/main/diario-viajes"
+              target="_blank"
+              class="btn"
+              >Ver Proyecto</a
+            >
+          </div>
+        </div>
+        <div class="btn-ver-todos">
+          <a href="proyectos.html" class="btn">Ver Todos los Proyectos</a>
+        </div>
+      </section>
+      <footer id="footer">
+        <div class="footer-contenido">
+          <p>© 2024 Cristian Anes García</p>
+          <div class="footer-enlaces">
+            <a
+              href="https://github.com/cristiananes"
+              target="_blank"
+              aria-label="GitHub"
+            >
+              <i class="fab fa-github"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/cristian-anes-garc%C3%ADa-664a94233/"
+              target="_blank"
+              aria-label="LinkedIn"
+            >
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="contacto.html" class="footer-contacto">Contacto</a>
+          </div>
+        </div>
+      </footer>
+    </main>
     <script src="scripts/main.js"></script>
   </body>
 </html>
