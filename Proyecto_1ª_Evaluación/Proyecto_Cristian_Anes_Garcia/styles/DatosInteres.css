@@ -70,3 +70,17 @@ main {
     padding-top: 8vh;
   }
 }
+@media screen and (min-width: 651px) and (max-width: 1024px) {
+  main {
+    padding: 5vh 2vw; /* Espaciado adaptado */
+  }
+
+  .formacion-experiencia {
+    flex-direction: column; /* Cambia a columna en tablet */
+    gap: 20px;
+  }
+
+  .diploma img {
+    width: 80%;
+  }
+}

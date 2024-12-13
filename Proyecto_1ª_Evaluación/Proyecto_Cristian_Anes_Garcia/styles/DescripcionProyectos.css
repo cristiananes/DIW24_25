@@ -133,3 +133,17 @@
     padding-top: 10vh;
   }
 }
+@media screen and (min-width: 651px) and (max-width: 1024px) {
+  .proyecto-info {
+    flex-direction: column; /* Apila imagen y texto */
+    gap: 15px;
+  }
+
+  .proyecto-info img {
+    width: 70%;
+  }
+
+  .resultados-grid {
+    grid-template-columns: repeat(2, 1fr); /* Cambia a 2 columnas */
+  }
+}

@@ -181,3 +181,25 @@
   text-decoration: none;
   color: var(--color-complementario);
 }
+@media screen and (min-width: 651px) and (max-width: 1024px) {
+  #inicio {
+    padding: 30px;
+  }
+
+  .intro-contenido img {
+    width: 70%; /* Ajustar imagen */
+  }
+
+  .sobre-contenido {
+    flex-wrap: wrap; /* Permite que los elementos salten a nuevas líneas */
+    gap: 15px;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas en tablet */
+  }
+
+  .proyectos-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas en tablet */
+  }
+}

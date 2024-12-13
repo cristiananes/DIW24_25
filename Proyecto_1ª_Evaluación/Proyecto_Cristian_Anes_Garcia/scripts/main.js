@@ -51,7 +51,7 @@ function generarNavegador() {
       <button id="hamburger" onclick="toggleMenu()">☰</button>
       <ul>
         <li><button id="boton-modo-oscuro">Alternar Modo Oscuro</button></li>
-        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="../index.html#inicio">Inicio</a></li>
         <li><a href="../index.html#sobre-mi">Sobre mí</a></li>
         <li>
           <a class="seDespliega">Proyectos ></a>

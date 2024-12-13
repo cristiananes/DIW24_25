@@ -71,3 +71,18 @@ textarea {
 }
 @media screen and (max-with: 650px) {
 }
+@media screen and (min-width: 651px) and (max-width: 1024px) {
+  #contact-form {
+    max-width: 80%; /* Reduce el ancho del formulario */
+    padding: 15px;
+  }
+
+  .input-group {
+    flex-direction: column; /* Apila los campos */
+    gap: 15px;
+  }
+
+  #div-boton button {
+    font-size: 1rem;
+  }
+}
