@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacto</title>
+    <link rel="stylesheet" href="../styles/contacto.css" />
+  </head>
+  <body>
+    <header>
+      <nav id="main-nav">
+        <h3>Cristian Anes García</h3>
+        <img src="../img/IMG_7276-min.jpg" alt="" />
+        <button id="hamburger" onclick="toggleMenu()">☰</button>
+        <ul>
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Sobre mi</a></li>
+          <li>
+            <a class="seDespliega">Proyectos ></a>
+            <ul class="desplegable">
+              <li><a href="#">Consultas Medicas</a></li>
+              <li><a href="#">Quiz</a></li>
+              <li><a href="#">Camisetas Lenguajes</a></li>
+              <li><a href="#">Diario de viajes</a></li>
+            </ul>
+          </li>
+          <li>
+            <a class="seDespliega">Datos de interés ></a>
+            <ul class="desplegable">
+              <li><a href="#">Formación</a></li>
+              <li><a href="#">Experiencia</a></li>
+              <li><a href="#">Diplomas</a></li>
+              <li><a href="#">Disponibilidad</a></li>
+            </ul>
+          </li>
+
+          <li><a href="#">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div id="contact-form">
+        <h3>CONTÁCTAME LLENANDO TODOS LOS CAMPOS</h3>
+        <form
+          action="#"
+          method="POST"
+          id="formulario"
+          name="contacto"
+          data-netlify="true"
+        >
+          <div class="input-group">
+            <div class="input-box">
+              <label for="name">Nombre</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Tu Nombre"
+                required
+                minlength="3"
+                maxlength="20"
+              />
+            </div>
+            <div class="input-box">
+              <label for="phone">Teléfono</label>
+              <input
+                type="tel"
+                name="tel"
+                id="phone"
+                placeholder="Tu Teléfono"
+                required
+                pattern="\d{9}"
+                maxlength="9"
+              />
+            </div>
+          </div>
+          <div class="input-box">
+            <label for="email">Correo</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Tu Email"
+              required
+            />
+          </div>
+          <div class="input-box">
+            <label for="message">Mensaje</label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Escribe tu mensaje aquí"
+              required
+            ></textarea>
+          </div>
+          <div id="div-boton">
+            <button type="submit">ENVIAR</button>
+          </div>
+        </form>
+      </div>
+    </main>
+    <script src="../scripts/main.js"></script>
+  </body>
+</html>
