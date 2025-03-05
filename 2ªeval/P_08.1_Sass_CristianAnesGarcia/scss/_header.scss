@@ -1,0 +1,64 @@
+@import "variables"; // Importa las variables
+
+.header {
+  display: flex;
+  justify-content: space-between; // Espacia el logo y el menú
+  align-items: center;
+  background-color: $color-secundario; // Color de fondo del logo y encabezado
+  height: 100px;
+  padding: 0 20px; // Espaciado interno para los lados
+
+  .logo {
+    flex: 0 0 auto; // El logo ocupa solo el espacio necesario
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-principal; // Fondo del logo
+    color: white;
+    font-size: $tamano-titulo; // Tamaño de título
+    font-weight: bold;
+    text-transform: uppercase;
+    height: 100%; // Ajusta la altura al contenedor
+    padding: 0 20px; // Espaciado interno del logo
+  }
+
+  .menu {
+    flex: 0 0 auto; // El menú ocupa el espacio necesario
+    display: flex;
+    justify-content: space-around; // Espaciado uniforme entre elementos del menú
+    align-items: center;
+    background-color: $color-secundario; // Fondo del menú
+    height: 100%;
+
+    .menu-item {
+      flex: 0 0 auto; // Cada elemento tiene un ancho automático
+      text-align: center;
+      background-color: $color-secundario;
+      margin: 0 5px;
+      padding: 10px;
+      border-radius: 5px;
+      font-size: $tamano-parrafo; // Tamaño para los párrafos
+      font-weight: bold;
+      color: $color-principal;
+
+      &:hover {
+        background-color: darken($color-secundario, 10%); // Efecto hover
+      }
+
+      &.active {
+        background-color: $color-complementario; // Fondo de la opción activa
+        color: white;
+      }
+
+      .number {
+        font-size: 0.8rem;
+        display: block;
+        color: darken($color-secundario, 30%);
+      }
+
+      .text {
+        font-size: $tamano-subtitulo; // Tamaño del subtítulo
+      }
+    }
+  }
+}

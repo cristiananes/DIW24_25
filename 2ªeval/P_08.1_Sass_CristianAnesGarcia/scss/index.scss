@@ -1,0 +1,8 @@
+//importamos las variables
+//si usamos import las importamos en ambito global
+//si usamos use las importamos en ámbito local y podemos ponerle nombre
+@use "variables" as *;
+
+@use "header" as *;
+@use "main" as *;
+@use "footer" as *;

@@ -1,0 +1,51 @@
+@use "variables" as *;
+@use "sass:color";
+
+//TENGO QUE CREAR UN EACH QUE ME RECORRA LA
+//PALETA DE COLORES Y CREE UNA CLASE
+//POR CADA COLOR COMO COLOR DE FONDO Y COLOR
+//DE LETRA
+
+@each $nombre, $color in $paleta {
+  // Ignorar blanco y negro
+  @if $color !=
+    map-get($map: $paleta, $key: blanco) and
+    $color !=
+    map-get($map: $paleta, $key: negro)
+  {
+    // Generar colores aclarados
+    @for $i from 1 through 4 {
+      .bg-color-light-#{$i * 2}-#{$nombre} {
+        background-color: mix(
+          map-get($map: $paleta, $key: blanco),
+          $color,
+          $i * 20%
+        );
+      }
+    }
+
+    // Generar colores oscurecidos
+    @for $i from 1 through 4 {
+      .bg-color-dark-#{$i * 2}-#{$nombre} {
+        background-color: mix(
+          map-get($map: $paleta, $key: negro),
+          $color,
+          $i * 20%
+        );
+      }
+    }
+  }
+
+  // Clases básicas de fondo y texto
+  .bg-#{$nombre} {
+    background-color: $color;
+  }
+  .text-#{$nombre} {
+    color: $color;
+  }
+}
+
+/* 
+El codigo viejo no puedo dejarlo comentado porque no le gustaba y de me daba error osea que lo voy a dejar 
+en un archivo txt en el proyecto
+*/

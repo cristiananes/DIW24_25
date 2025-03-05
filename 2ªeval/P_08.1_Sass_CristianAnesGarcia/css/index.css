@@ -1,0 +1,134 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ecf0f1;
+  height: 100px;
+  padding: 0 20px;
+}
+.header .logo {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #3498db;
+  color: white;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  height: 100%;
+  padding: 0 20px;
+}
+.header .menu {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #ecf0f1;
+  height: 100%;
+}
+.header .menu .menu-item {
+  flex: 0 0 auto;
+  text-align: center;
+  background-color: #ecf0f1;
+  margin: 0 5px;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #3498db;
+}
+.header .menu .menu-item:hover {
+  background-color: rgb(206.6363636364, 216.8181818182, 219.3636363636);
+}
+.header .menu .menu-item.active {
+  background-color: #e67e22;
+  color: white;
+}
+.header .menu .menu-item .number {
+  font-size: 0.8rem;
+  display: block;
+  color: rgb(147.9090909091, 170.4545454545, 176.0909090909);
+}
+.header .menu .menu-item .text {
+  font-size: 1.8rem;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: stretch;
+  gap: 2rem;
+  background-color: white;
+  padding: 3rem;
+}
+.main .main-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+.main .main-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  background-color: #ecf0f1;
+  border-radius: 10px;
+  padding: 1rem;
+}
+.main .main-text .main-title {
+  font-size: 2.5rem;
+  font-family: "Playfair Display", serif;
+  color: #3498db;
+  margin-bottom: 1rem;
+}
+.main .main-text .main-subtitle {
+  font-size: 1.8rem;
+  font-family: "Roboto", sans-serif;
+  color: rgb(177.2727272727, 193.6363636364, 197.7272727273);
+  margin-bottom: 1rem;
+}
+.main .main-text .main-description {
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+  color: #3498db;
+  margin-bottom: 1.5rem;
+}
+.main .main-text .main-button {
+  display: inline-block;
+  background-color: #e67e22;
+  color: #ecf0f1;
+  text-decoration: none;
+  padding: 0.5rem 0.5rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  width: 8rem;
+}
+.main .main-text .main-button:hover {
+  background-color: rgb(191.3536585366, 101.3048780488, 21.6463414634);
+}
+
+.footer {
+  background-color: #3498db;
+  color: white;
+  padding: 2rem 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.footer .footer-item {
+  text-align: center;
+  max-width: 200px;
+}
+.footer .footer-item .icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.footer .footer-item .text {
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+}
+
+/*# sourceMappingURL=index.css.map */

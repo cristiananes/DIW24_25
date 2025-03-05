@@ -1,0 +1,25 @@
+@use "variables" as *;
+
+.footer {
+  background-color: $color-principal; // Fondo del footer
+  color: white; // Color de los íconos y texto
+  padding: 2rem 0;
+  display: flex;
+  justify-content: space-around; // Distribución horizontal uniforme
+  align-items: center;
+
+  .footer-item {
+    text-align: center;
+    max-width: 200px;
+
+    .icon {
+      font-size: 2.5rem; // Tamaño de los íconos
+      margin-bottom: 1rem; // Espaciado con el texto
+    }
+
+    .text {
+      font-size: $tamano-parrafo; // Tamaño de los textos
+      font-family: $fuente-principal; // Fuente principal
+    }
+  }
+}

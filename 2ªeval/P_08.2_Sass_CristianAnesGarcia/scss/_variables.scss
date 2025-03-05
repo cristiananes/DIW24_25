@@ -1,0 +1,45 @@
+//variables de los colores
+
+$primary: #3498db;
+$secondary: #ecf0f1;
+$success: #2ecc71;
+$danger: #e74c3c;
+$warning: #e67e22;
+$info: aqua;
+
+//variables de los tamanios de padding y margen
+$padding-base: 1rem;
+$margin-base: 1rem;
+
+//variables bordes
+$border-width: 2px;
+$border-radius: 5px;
+
+//variables de tamanio de letra
+/* $font-normal: 1rem; // Tamaño de fuente base
+$font-xs: $font-normal * 0.5; // 50% del tamaño base
+$font-s: $font-normal * 0.75; // 75% del tamaño base
+$font-l: $font-normal * 1.5; // 150% del tamaño base
+$font-xl: $font-normal * 2; // 200% del tamaño base
+$font-xxl: $font-normal * 3; // 300% del tamaño base */
+
+// Sombra de caja
+$box-shadow-base: 0 4px 6px rgba(0, 0, 0, 0.1); // Sombra estándar para componentes
+
+//paleta de colores
+$paleta: (
+  "azul-principal": $primary,
+  "gris-claro": $secondary,
+  "naranja-complementario": $warning,
+  "verde-suave": $success,
+  "rojo-intenso": $danger,
+  "celeste": $info,
+  "morado-suave": #9b59b6,
+  "amarillo-alegre": #f1c40f,
+  "azul-oscuro": #2c3e50,
+  "gris-oscuro": #95a5a6,
+  "rosa-intenso": #e84393,
+  "verde-oscuro": #27ae60,
+  "negro": #000000,
+  "blanco": #ffffff,
+);

@@ -1,0 +1,65 @@
+@use "variables" as *;
+.main {
+  display: grid;
+  grid-template-columns: 1fr 1fr; // Dos columnas: imagen y texto
+  align-items: stretch; // Hace que ambas columnas tengan la misma altura
+  gap: 2rem;
+  background-color: white; // Fondo principal
+  padding: 3rem;
+
+  .main-image {
+    img {
+      width: 100%; // Imagen responsiva
+      height: auto;
+      border-radius: 10px; // Bordes redondeados
+    }
+  }
+
+  .main-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; // Centra verticalmente el contenido dentro del div
+    text-align: left;
+    background-color: $color-secundario;
+    border-radius: 10px; // Bordes redondeados, igual que la imagen
+    padding: 1rem;
+
+    .main-title {
+      font-size: $tamano-titulo; // Tamaño del título principal
+      font-family: $fuente-secundaria; // Fuente secundaria para títulos
+      color: $color-principal;
+      margin-bottom: 1rem;
+    }
+
+    .main-subtitle {
+      font-size: $tamano-subtitulo; // Tamaño del subtítulo
+      font-family: $fuente-principal; // Fuente principal
+      color: darken($color-secundario, 20%); // Texto más oscuro
+      margin-bottom: 1rem;
+    }
+
+    .main-description {
+      font-size: $tamano-parrafo; // Tamaño del texto del párrafo
+      font-family: $fuente-principal;
+      color: $color-principal;
+      margin-bottom: 1.5rem;
+    }
+
+    .main-button {
+      display: inline-block;
+      background-color: $color-complementario; // Color del botón
+      color: $color-secundario; // Texto blanco
+      text-decoration: none; // Sin subrayado
+      padding: 0.5rem 0.5rem; // Espaciado interno
+      border-radius: 5px; // Bordes redondeados
+      font-size: $tamano-parrafo;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+      width: 8rem;
+
+      &:hover {
+        background-color: darken($color-complementario, 10%); // Efecto hover
+      }
+    }
+  }
+}

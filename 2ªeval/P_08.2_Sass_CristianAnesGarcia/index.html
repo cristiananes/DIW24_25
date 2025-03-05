@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>P_08.2 Cristian Anes</title>
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+  <body>
+    <!-- Encabezado -->
+    <header class="encabezado bg-azul-principal text-blanco">
+      <h1 class="titulo-principal text-centrado">Mi Proyecto Personal</h1>
+    </header>
+    <!-- Sección de introducción -->
+    <section class="contenedor bg-gris-claro">
+      <h2 class="subtitulo text-negro">Introducción</h2>
+      <p class="parrafo">
+        Este es un proyecto que utiliza las clases personalizadas definidas con
+        SCSS. Explora cómo se estructuran divs, títulos, párrafos y tarjetas.
+      </p>
+    </section>
+    <div class="cardfoto">
+      <img
+        src="./img/portatil-domestico.jpg"
+        class="cardfoto-img-top"
+        alt="..."
+      />
+      <div class="cardfoto-body">
+        <h5 class="cardfoto-title">Card title</h5>
+        <p class="cardfoto-text">
+          Some quick example text to build on the card title and make up the
+          bulk of the card's content.
+        </p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+
+    <div class="property-card">
+      <img
+        src="img/portatil-domestico.jpg"
+        alt="Casa de lujo"
+        class="property-card-img"
+      />
+      <div class="property-card-body">
+        <h3 class="property-title">Casa de Lujo en el Lago</h3>
+        <p class="property-description">
+          Casa en el lago con excelente vista, acabados de lujo a un excelente
+          precio
+        </p>
+        <p class="property-price">1.000.000€</p>
+        <div class="property-icons">
+          <span>3 🛏️</span>
+          <span>3 🚗</span>
+          <span>4 🛁</span>
+        </div>
+        <button class="property-btn">Ver Propiedad</button>
+      </div>
+    </div>
+    <!-- Sección adicional -->
+    <section class="contenedor bg-blanco">
+      <h2 class="subtitulo text-negro">Sección Extra</h2>
+      <div class="extra bg-gris-oscuro text-blanco">
+        <p>
+          Este es un ejemplo de una sección con un fondo oscuro y texto claro.
+        </p>
+      </div>
+    </section>
+    <div class="botones">
+      <a href="#" class="btn-celeste property-btn">Click Me</a>
+      <a href="#" class="btn-rojo-intenso property-btn">Click Me</a>
+      <a href="#" class="btn-negro property-btn">Click Me</a>
+      <a href="#" class="btn-verde-suave">Click Me</a>
+    </div>
+    <div class="botones-borde">
+      <a href="#" class="btn-borde-celeste">Click Me</a>
+      <a href="#" class="btn-borde-rojo-intenso">Click Me</a>
+      <a href="#" class="btn-borde-negro">Click Me</a>
+      <a href="#" class="btn-borde-verde-suave property-btn">Click Me</a>
+    </div>
+    <section class="colores-y-botones">
+      <h2 class="subtitulo text-negro">Nuevas Clases de Colores y Botones</h2>
+
+      <!-- Clases de colores -->
+      <div class="ejemplo-colores">
+        <h3 class="text-azul-principal">Clases de Colores</h3>
+        <div class="colores">
+          <span class="bg-color-dark-8-azul-principal text-blanco"
+            >azul-principal dark 8</span
+          >
+          <span class="bg-color-dark-6-azul-principal text-blanco"
+            >azul-principal dark 6</span
+          >
+          <span class="bg-color-dark-4-azul-principal text-blanco"
+            >azul-principal dark 4</span
+          >
+          <span class="bg-color-dark-2-azul-principal text-blanco"
+            >azul-principal dark 2</span
+          >
+          <span class="bg-azul-principal text-blanco">azul-principal</span>
+          <span class="bg-color-light-2-azul-principal text-negro"
+            >azul-principal light 2</span
+          >
+          <span class="bg-color-light-4-azul-principal text-negro"
+            >azul-principal light 4</span
+          >
+          <span class="bg-color-light-6-azul-principal text-negro"
+            >azul-principal light 6</span
+          >
+          <span class="bg-color-light-8-azul-principal text-negro"
+            >azul-principal light 8</span
+          >
+        </div>
+      </div>
+
+      <!-- Botones complementarios -->
+      <div class="ejemplo-botones">
+        <h3 class="text-azul-principal">Botones Complementarios</h3>
+        <div class="botones">
+          <a href="#" class="btn-complement-azul-principal"
+            >azul-principal Complement</a
+          >
+          <a href="#" class="btn-complement-verde-suave"
+            >verde-suave Complement</a
+          >
+          <a href="#" class="btn-complement-rojo-intenso"
+            >rojo-intenso Complement</a
+          >
+          <a href="#" class="btn-complement-naranja-complementario"
+            >naranja-complementario Complement</a
+          >
+        </div>
+      </div>
+
+      <!-- Prueba de los colores despues de añadirlos con bucles for -->
+      <div class="bg-color-light-2-azul-principal text-negro">Light 2</div>
+      <div class="bg-color-dark-4-azul-principal text-blanco">Dark 4</div>
+      <div class="bg-azul-principal text-blanco">Azul Principal</div>
+
+      <!-- Prueba de utilidades -->
+      <div class="m-2 p-3 o-5 font-xl">
+        Texto con márgenes, padding, opacidad y fuente grande
+      </div>
+      <div class="mt-4 ml-3">Márgen superior e izquierdo</div>
+    </section>
+
+    <!-- Prueba dek grid-->
+    <section class="contenedor">
+      <h2 class="subtitulo text-negro">Sistema de Grid</h2>
+
+      <div class="row">
+        <div class="col-sm-12 col-md-6 col-xl-3">
+          <div class="card">
+            <h3 class="card-title">Tarjeta 1</h3>
+            <p class="card-body">Contenido de la tarjeta 1.</p>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-xl-3">
+          <div class="card">
+            <h3 class="card-title">Tarjeta 2</h3>
+            <p class="card-body">Contenido de la tarjeta 2.</p>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-xl-3">
+          <div class="card">
+            <h3 class="card-title">Tarjeta 3</h3>
+            <p class="card-body">Contenido de la tarjeta 3.</p>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-xl-3">
+          <div class="card">
+            <h3 class="card-title">Tarjeta 4</h3>
+            <p class="card-body">Contenido de la tarjeta 4.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer class="pie bg-azul-oscuro text-blanco text-centrado">
+      <p>© 2025 Mi Proyecto Personal</p>
+    </footer>
+  </body>
+</html>

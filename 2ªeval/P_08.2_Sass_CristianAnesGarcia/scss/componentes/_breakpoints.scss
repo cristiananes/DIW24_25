@@ -1,0 +1,26 @@
+// Definir los breakpoints según Bootstrap
+/* 
+📌 ¿Qué hace este código?
+
+Define un mapa $breakpoints con los tamaños estándar de Bootstrap.
+Crea un mixin @mixin breakpoint($size) que recibe un tamaño y genera la media query automáticamente.
+Verifica que el tamaño esté en el mapa antes de aplicar la media query. */
+$breakpoints: (
+  "xs": 0,
+  "sm": 576px,
+  "md": 768px,
+  "lg": 992px,
+  "xl": 1200px,
+  "xxl": 1400px,
+);
+
+// Mixin para aplicar media queries dinámicamente
+@mixin breakpoint($size) {
+  @if map-has-key($breakpoints, $size) {
+    @media (min-width: #{map-get($breakpoints, $size)}) {
+      @content;
+    }
+  } @else {
+    @warn "El breakpoint #{$size} no está definido en el mapa.";
+  }
+}
