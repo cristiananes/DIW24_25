@@ -8,9 +8,22 @@
   </head>
   <body>
     <!-- Encabezado -->
-    <header class="encabezado bg-azul-principal text-blanco">
-      <h1 class="titulo-principal text-centrado">Mi Proyecto Personal</h1>
+    <header class="navbar">
+      <div class="navbar__logo">MiLogo</div>
+      <nav class="navbar__menu">
+        <ul class="navbar__list">
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Servicios</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+      </nav>
+      <button class="navbar__toggle" id="menu-toggle">&#9776;</button>
     </header>
+
+    <script src="js/menu.js"></script>
+
+    <h1 class="titulo-principal text-centrado">Mi Proyecto Personal</h1>
+
     <!-- Sección de introducción -->
     <section class="contenedor bg-gris-claro">
       <h2 class="subtitulo text-negro">Introducción</h2>
