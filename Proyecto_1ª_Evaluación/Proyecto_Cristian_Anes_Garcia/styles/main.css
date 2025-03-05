@@ -1,0 +1,252 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "roboto";
+  font-size: x-large;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap");
+/* Fuente descargada configurada de manera normal */
+@font-face {
+  font-family: "roboto";
+  src: url(/Proyecto_Cristian_Anes_Garcia/fonts/);
+  font-weight: normal;
+  font-style: normal;
+}
+/* Fuente descargada en bold para titulos y demás */
+@font-face {
+  font-family: "roboto";
+  src: url(/Proyecto_Cristian_Anes_Garcia/fonts/Roboto-Bold.ttf);
+  font-weight: bold;
+  font-style: bold;
+}
+
+:root {
+  /* Colores en modo claro:  */
+  --color-principal: #e6e8e3;
+  --color-secundario: #bec3bc;
+  --color-complementario: #65727a;
+  /* 
+   Colores en modo oscuro 
+  --color-principal-oscuro: #65727a;
+  --color-secundario-oscuro: #8f9a9c;
+  --color-complementario-oscuro: #e6e8e3; */
+
+  /* La fuente importada con @import */
+  --fuente-principal: "Parkinsans", sans-serif;
+  --fuente-secundaria: "roboto";
+  --tamanio-fuente: 12px;
+  /*  
+    La paleta de colores completa por si hiciese falta más adelante:
+    https://paletadecolores.com.mx/paleta/e6e8e3/d7dacf/bec3bc/8f9a9c/65727a/
+    #e6e8e3
+    #d7dacf
+    #bec3bc
+    #8f9a9c
+    #65727a */
+}
+
+/* Estilos del navegador */
+nav {
+  background-color: var(--color-complementario);
+  color: var(--color-principal);
+  padding: 20px;
+  gap: 15px;
+  width: 300px;
+  height: 100vh;
+  overflow-y: auto;
+  position: fixed;
+  z-index: 100;
+}
+nav #boton-modo-oscuro {
+  background-color: var(--color-secundario);
+  padding: 3px;
+  border-radius: 30px;
+}
+header nav {
+  display: flex;
+  flex-direction: column;
+}
+header nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  flex-direction: column;
+}
+header nav ul a {
+  text-decoration: none;
+  color: var(--color-principal);
+  cursor: pointer;
+}
+header nav ul li ul {
+  /* Que no se muestren los submenus */
+  display: none;
+}
+/* header nav ul li:hover .desplegable {
+  display: block;
+} */
+header nav ul li ul.desplegable {
+  display: none;
+  position: relative;
+  background-color: var(--color-complementario);
+  padding: 10px;
+  border-radius: 5px;
+  list-style: none;
+}
+
+header nav ul li ul.desplegable.open {
+  display: block;
+}
+#seDespliega {
+  cursor: pointer;
+}
+
+header img {
+  height: 400px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  object-fit: cover;
+}
+
+#hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: var(--color-principal);
+  cursor: pointer;
+}
+
+/* EWstilos del main */
+main {
+  margin-left: 300px;
+}
+/* Estilos para footer */
+footer {
+  margin-left: 300px;
+}
+/* .footer {
+  padding: 20px;
+  background: var(--color-complementario);
+  color: var(--color-principal);
+  text-align: center;
+  font-size: 1rem;
+} */
+
+.footer-contenido {
+  background: var(--color-complementario);
+  color: var(--color-principal);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-enlaces {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-enlaces a {
+  color: var(--color-principal);
+  text-decoration: none;
+  font-size: 1.5rem;
+  transition: color 0.3s;
+}
+
+.footer-enlaces a:hover {
+  color: var(--color-secundario);
+}
+
+.footer-contacto {
+  font-size: 1rem;
+  text-decoration: none;
+  color: var(--color-principal);
+  padding: 5px 10px;
+  border: 1px solid var(--color-principal);
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.footer-contacto:hover {
+  background-color: var(--color-principal);
+  color: var(--color-complementario);
+  animation: 0.3s glitch infinite;
+}
+@keyframes glitch {
+  0% {
+    text-shadow: red -4px 0, cyan 4px 0;
+  }
+  50% {
+    text-shadow: red 4px 0, cyan -4px 0;
+  }
+  100% {
+    text-shadow: red -4px 0, cyan 4px 0;
+  }
+}
+.modo-oscuro {
+  --color-principal: #65727a;
+  --color-secundario: #8f9a9c;
+  --color-complementario: #e6e8e3;
+}
+
+@media screen and (max-width: 750px) {
+  /* Mostrar botón de hamburguesa y ocultar menú */
+  #hamburger {
+    display: flex;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  #main-nav ul,
+  img {
+    display: none;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  #main-nav.open {
+    height: 100%;
+  }
+
+  #main-nav.open ul {
+    display: flex;
+  }
+  #main-nav.open img {
+    display: flex;
+    height: 70vh;
+    object-fit: contain;
+  }
+
+  #main-nav ul li {
+    text-align: center;
+    padding: 10px;
+    border-bottom: 1px solid #333;
+  }
+  #main-nav ul li ul.desplegable {
+    display: none;
+    flex-direction: column;
+    background-color: #333;
+    padding: 10px;
+  }
+
+  /* Mostrar submenú al hacer hover */
+  /*   #main-nav ul li:hover > ul.desplegable {
+    display: flex;
+  } */
+  #main-nav {
+    height: 10vh;
+    width: 100%;
+  }
+  main {
+    margin-left: 0px;
+  }
+  footer {
+    margin-left: 0;
+  }
+}

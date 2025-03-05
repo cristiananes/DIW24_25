@@ -5,59 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Datos de Interés</title>
     <link rel="stylesheet" href="../styles/DatosInteres.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <header>
-      <nav id="main-nav">
-        <h3>Cristian Anes García</h3>
-        <img src="../img/IMG_7276-min.jpg" alt="Foto de Cristian Anes" />
-        <button id="hamburger" onclick="toggleMenu()">☰</button>
-        <ul>
-          <li><a href="#">Inicio</a></li>
-          <li><a href="#">Sobre mí</a></li>
-          <li>
-            <a class="seDespliega">Proyectos ></a>
-            <ul class="desplegable">
-              <li><a href="#">Consultas Médicas</a></li>
-              <li><a href="#">Quiz</a></li>
-              <li><a href="#">Camisetas Lenguajes</a></li>
-              <li><a href="#">Diario de Viajes</a></li>
-            </ul>
-          </li>
-          <li>
-            <a class="seDespliega">Datos de interés ></a>
-            <ul class="desplegable">
-              <li><a href="#">Formación</a></li>
-              <li><a href="#">Experiencia</a></li>
-              <li><a href="#">Diplomas</a></li>
-              <li><a href="#">Disponibilidad</a></li>
-            </ul>
-          </li>
-          <li><a href="#">Contacto</a></li>
-        </ul>
-      </nav>
-    </header>
+    <header></header>
     <main>
       <!-- Sección de Formación -->
-      <section id="formacion">
-        <h2>Formación</h2>
-        <ul>
-          <li>Técnico Superior en Desarrollo de Aplicaciones Web</li>
-          <li>Bachillerato</li>
-        </ul>
-      </section>
+      <div class="formacion-experiencia">
+        <section id="formacion">
+          <h2>Formación</h2>
+          <ul>
+            <li>Técnico Superior en Desarrollo de Aplicaciones Web</li>
+            <li>Bachillerato</li>
+            <li>Bootcamp de desarrollo FullStack de Hack a Boss</li>
+          </ul>
+        </section>
 
-      <!-- Sección de Experiencia -->
-      <section id="experiencia">
-        <h2>Experiencia</h2>
-        <ul>
-          <li>
-            Seresco - Encargado del mantenimiento y desarrollo del backend
-          </li>
-          <li>Proyecto empresarial - Desarrollo de aplicaciones FullStack</li>
-        </ul>
-      </section>
-
+        <!-- Sección de Experiencia -->
+        <section id="experiencia">
+          <h2>Experiencia</h2>
+          <ul>
+            <li>
+              Proximamente FCT (Formación en centros de trabajo). Fecha
+              prevista: Marzo de 2024
+            </li>
+            <li>Proyecto empresarial - Desarrollo de aplicaciones FullStack</li>
+          </ul>
+        </section>
+      </div>
       <!-- Sección de Diplomas -->
       <section id="diplomas">
         <h2>Diplomas</h2>
@@ -68,6 +46,15 @@
             id="hackaboss"
             src="../img/Diploma Hack a Boos.png"
             alt="Diploma Hack a Boss"
+            style="display: none"
+          />
+        </div>
+        <div class="diploma">
+          <h3 onclick="toggleDiploma('bachiller')">Titulo de bachuiller</h3>
+          <img
+            id="bachiller"
+            src="../img/TituloBachiller.jpg"
+            alt="Titulo bach"
             style="display: none"
           />
         </div>
@@ -93,14 +80,7 @@
         </p>
       </section>
     </main>
-    <footer>
-      <p>© 2024 Cristian Anes García</p>
-    </footer>
-    <script>
-      function toggleDiploma(id) {
-        const img = document.getElementById(id);
-        img.style.display = img.style.display === "none" ? "block" : "none";
-      }
-    </script>
+    <footer></footer>
+    <script src="../scripts/main.js"></script>
   </body>
 </html>

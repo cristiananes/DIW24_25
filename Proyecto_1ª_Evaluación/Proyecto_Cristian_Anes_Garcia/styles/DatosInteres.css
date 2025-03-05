@@ -1,105 +1,5 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: "roboto";
-  font-size: x-large;
-}
+@import url(main.css);
 
-@import url("https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap");
-/* Fuente descargada configurada de manera normal */
-@font-face {
-  font-family: "roboto";
-  src: url(/Proyecto_Cristian_Anes_Garcia/fonts/);
-  font-weight: normal;
-  font-style: normal;
-}
-/* Fuente descargada en bold para titulos y demás */
-@font-face {
-  font-family: "roboto";
-  src: url(/Proyecto_Cristian_Anes_Garcia/fonts/Roboto-Bold.ttf);
-  font-weight: bold;
-  font-style: bold;
-}
-
-:root {
-  /* Colores en modo claro:  */
-  --color-principal: #e6e8e3;
-  --color-secundario: #bec3bc;
-  --color-complementario: #65727a;
-
-  /* Colores en modo oscuro */
-  --color-principal-oscuro: #65727a;
-  --color-secundario-oscuro: #8f9a9c;
-  --color-complementario-oscuro: #e6e8e3;
-
-  /* La fuente importada con @import */
-  --fuente-principal: "Parkinsans", sans-serif;
-  --fuente-secundaria: "roboto";
-  --tamanio-fuente: 12px;
-  /*  
-    La paleta de colores completa por si hiciese falta más adelante:
-    https://paletadecolores.com.mx/paleta/e6e8e3/d7dacf/bec3bc/8f9a9c/65727a/
-    #e6e8e3
-    #d7dacf
-    #bec3bc
-    #8f9a9c
-    #65727a */
-}
-/* Estilos del navegador */
-nav {
-  background-color: var(--color-complementario);
-  color: var(--color-principal);
-  padding: 20px;
-  gap: 15px;
-  width: 300px;
-  height: 100vh;
-  overflow-y: auto;
-  position: fixed;
-  z-index: 1000;
-}
-header nav {
-  display: flex;
-  flex-direction: column;
-}
-header nav ul {
-  display: flex;
-  gap: 20px;
-  list-style: none;
-  flex-direction: column;
-}
-header nav ul a {
-  text-decoration: none;
-  color: var(--color-principal);
-}
-header nav ul li ul {
-  /* Que no se muestren los submenus */
-  display: none;
-}
-header nav ul li:hover .desplegable {
-  display: block;
-}
-
-header img {
-  height: 400px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-#hamburger {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 24px;
-  color: var(--color-principal);
-  cursor: pointer;
-}
-main {
-  margin-left: 300px;
-}
-footer {
-  margin-left: 300px;
-}
 /* General */
 body {
   font-family: var(--fuente-secundaria);
@@ -109,12 +9,12 @@ body {
 
 h2 {
   font-size: 2rem;
-  color: var(--color-principal-oscuro);
+  color: var(--color-complementario);
   margin-bottom: 20px;
 }
 
 section {
-  margin: 20px 0;
+  margin: 0 0;
   padding: 20px;
   background: var(--color-principal);
   border-radius: 10px;
@@ -140,7 +40,7 @@ ul li {
 }
 
 .diploma h3:hover {
-  color: var(--color-principal-oscuro);
+  color: var(--color-complementario);
 }
 
 .diploma img {
@@ -150,67 +50,37 @@ ul li {
   margin-top: 10px;
 }
 
-/* Footer */
-footer {
-  text-align: center;
-  padding: 20px;
-  background-color: var(--color-complementario);
-  color: var(--color-principal);
+.formacion-experiencia {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  gap: 10px;
 }
-
-@media screen and (max-width: 768px) {
-  /* Mostrar botón de hamburguesa y ocultar menú */
-  #hamburger {
-    display: flex;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-  }
-
-  #main-nav ul,
-  img {
-    display: none;
-    flex-direction: column;
-    gap: 0;
-  }
-
-  #main-nav.open {
-    height: 100%;
-  }
-
-  #main-nav.open ul {
-    display: flex;
-  }
-  #main-nav.open img {
-    display: flex;
-    height: 70vh;
-  }
-
-  #main-nav ul li {
-    text-align: center;
-    padding: 10px;
-    border-bottom: 1px solid #333;
-  }
-  #main-nav ul li ul.desplegable {
-    display: none;
-    flex-direction: column;
-    background-color: #333;
-    padding: 10px;
-  }
-
-  /* Mostrar submenú al hacer hover */
-  #main-nav ul li:hover > ul.desplegable {
-    display: flex;
-  }
-  #main-nav {
-    height: 12vh;
-    width: 100%;
-  }
+main {
+  padding: 15px;
+}
+#diplomas,
+#disponibilidad {
+  margin-top: 30px;
+  margin-bottom: 5px;
+}
+@media screen and (max-width: 650px) {
   main {
-    margin-left: 0px;
-    padding-top: 100px;
+    padding: 2vh;
+    padding-top: 8vh;
   }
-  footer {
-    margin-left: 0;
+}
+@media screen and (min-width: 651px) and (max-width: 1024px) {
+  main {
+    padding: 5vh 2vw; /* Espaciado adaptado */
+  }
+
+  .formacion-experiencia {
+    flex-direction: column; /* Cambia a columna en tablet */
+    gap: 20px;
+  }
+
+  .diploma img {
+    width: 80%;
   }
 }
