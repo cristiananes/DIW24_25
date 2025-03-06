@@ -1,0 +1,97 @@
+// Importar las variables y colores necesarios
+@use "../variables" as *;
+@use "../colores" as *;
+@use "../componentes/breakpoints" as *;
+
+.property-btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+
+  @include breakpoint(xs) {
+    font-size: 0.8rem;
+  }
+  @include breakpoint(sm) {
+    font-size: 1rem;
+  }
+  @include breakpoint(md) {
+    font-size: 1.2rem;
+  }
+  @include breakpoint(lg) {
+    font-size: 1.5rem;
+  }
+  @include breakpoint(xl) {
+    font-size: 1.75rem;
+  }
+}
+
+@mixin boton-estilo($color) {
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+  border: 0;
+  padding: 0.75rem 1.5rem;
+  border-radius: 20px;
+  background-color: $color;
+  color: map-get($map: $paleta, $key: blanco); // Texto blanco
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: lighten($color, 10%); // Aclarar el color en hover
+  }
+}
+
+@each $nombre, $color in $paleta {
+  .btn-#{$nombre} {
+    @include boton-estilo($color);
+  }
+}
+
+@mixin boton-borde-estilo($color) {
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+  border: 1px solid $color; // Borde del color correspondiente
+  padding: 0.75rem 1.5rem;
+  border-radius: 20px;
+  background-color: map-get($map: $paleta, $key: blanco); // Fondo blanco
+  color: $color; // Texto del color correspondiente
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: $color; // Fondo del color correspondiente
+    color: map-get($map: $paleta, $key: blanco); // Texto blanco en hover
+  }
+}
+
+@each $nombre, $color in $paleta {
+  .btn-borde-#{$nombre} {
+    @include boton-borde-estilo($color);
+  }
+}
+
+// Función para calcular el color complementario
+@function complementario($color) {
+  @return complement($color); // Utiliza el módulo de colores de Sass
+}
+
+// Generar las clases de botones con color complementario
+@each $nombre, $color in $paleta {
+  .btn-complement-#{$nombre} {
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border: 0;
+    border-radius: 20px;
+    background-color: $color; // Fondo del botón
+    color: complementario($color); // Texto del color complementario
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: complementario($color); // Fondo pasa al complementario
+      color: $color; // Texto pasa al color original
+    }
+  }
+}

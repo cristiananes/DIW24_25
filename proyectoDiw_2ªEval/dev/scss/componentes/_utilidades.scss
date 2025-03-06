@@ -1,0 +1,84 @@
+@use "../variables" as *;
+@use "../colores" as *;
+$base-margin: 0.5rem;
+$base-padding: 0.5rem;
+$base-opacity: 0.1;
+$base-font-size: 1rem;
+
+$utilities: (
+  "margin": (
+    "prefix": "m",
+    "values": (
+      "0": 0,
+      "1": $base-margin,
+      "2": $base-margin * 2,
+      "3": $base-margin * 4,
+      "4": $base-margin * 6,
+      "5": $base-margin * 8,
+    ),
+  ),
+  "padding": (
+    "prefix": "p",
+    "values": (
+      "0": 0,
+      "1": $base-padding,
+      "2": $base-padding * 2,
+      "3": $base-padding * 4,
+      "4": $base-padding * 6,
+      "5": $base-padding * 8,
+    ),
+  ),
+  "opacity": (
+    "prefix": "o",
+    "values": (
+      "1": $base-opacity * 1,
+      "2": $base-opacity * 2,
+      "3": $base-opacity * 3,
+      "4": $base-opacity * 4,
+      "5": $base-opacity * 5,
+      "6": $base-opacity * 6,
+      "7": $base-opacity * 7,
+      "8": $base-opacity * 8,
+      "9": $base-opacity * 9,
+      "10": 1,
+    ),
+  ),
+  "font-size": (
+    "prefix": "font",
+    "values": (
+      "xs": $base-font-size * 0.5,
+      "s": $base-font-size * 0.75,
+      "l": $base-font-size * 1.5,
+      "xl": $base-font-size * 2,
+      "xxl": $base-font-size * 3,
+    ),
+  ),
+);
+
+@each $propiedad, $detalles in $utilities {
+  $prefix: map-get($detalles, "prefix");
+  $values: map-get($detalles, "values");
+
+  @each $sufijo, $valor in $values {
+    .#{$prefix}-#{$sufijo} {
+      @if $propiedad == "margin" or $propiedad == "padding" {
+        #{$propiedad}: #{$valor};
+      } @else if $propiedad == "opacity" {
+        opacity: #{$valor};
+      } @else if $propiedad == "font-size" {
+        font-size: #{$valor};
+      }
+    }
+
+    // Clases adicionales para márgenes y paddings
+    @if $propiedad == "margin" or $propiedad == "padding" {
+      @each $lado,
+        $abreviatura in ("top": "t", "bottom": "b", "left": "l", "right": "r")
+      {
+        .#{$prefix}#{$abreviatura}-#{$sufijo} {
+          #{$propiedad}-#{$lado}: #{$valor};
+        }
+      }
+    }
+  }
+}

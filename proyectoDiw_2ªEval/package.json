@@ -1,0 +1,23 @@
+{
+  "name": "proyecto_2eval",
+  "version": "1.0.0",
+  "description": "Proyecto de la segunda evaluacion, en relacion con una aplicacion de gestion de alquileres",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Cristian Anes Garcia",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^5.0.0",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-htmlclean": "^2.7.22",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-purgecss": "^7.0.2",
+    "gulp-sass": "^6.0.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "sass": "^1.84.0"
+  }
+}

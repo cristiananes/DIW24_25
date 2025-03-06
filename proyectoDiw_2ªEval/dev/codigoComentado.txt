@@ -1,0 +1,80 @@
+/* @each $nombre, $color in $paleta {
+  .bg-#{$nombre} {
+    background-color: #{$color};
+  }
+
+  .text-#{$nombre} {
+    color: #{$color};
+  }
+
+  //codigo actualizado de la practica 5
+}
+
+@each $nombre, $color in $paleta {
+  // Ignorar blanco y negro
+  @if $color !=
+    map-get($map: $paleta, $key: blanco) and
+    $color !=
+    map-get($map: $paleta, $key: negro)
+  {
+    // Generar colores aclarados
+    .bg-color-light-2-#{$nombre} {
+      background-color: mix(
+        map-get($map: $paleta, $key: blanco),
+        $color,
+        20%
+      ); // Aclarado 20%
+    }
+    .bg-color-light-4-#{$nombre} {
+      background-color: mix(
+        map-get($map: $paleta, $key: blanco),
+        $color,
+        40%
+      ); // Aclarado 40%
+    }
+    .bg-color-light-6-#{$nombre} {
+      background-color: mix(
+        map-get($map: $paleta, $key: blanco),
+        $color,
+        60%
+      ); // Aclarado 60%
+    }
+    .bg-color-light-8-#{$nombre} {
+      background-color: mix(
+        map-get($map: $paleta, $key: blanco),
+        $color,
+        80%
+      ); // Aclarado 80%
+    }
+
+    // Generar colores oscurecidos
+    .bg-color-dark-2-#{$nombre} {
+      background-color: mix(
+        map-get($map: $paleta, $key: negro),
+        $color,
+        20%
+      ); // Oscurecido 20%
+    }
+    .bg-color-dark-4-#{$nombre} {
+      background-color: mix(
+        map-get($map: $paleta, $key: negro),
+        $color,
+        40%
+      ); // Oscurecido 40%
+    }
+    .bg-color-dark-6-#{$nombre} {
+      background-color: mix(
+        map-get($map: $paleta, $key: negro),
+        $color,
+        60%
+      ); // Oscurecido 60%
+    }
+    .bg-color-dark-8-#{$nombre} {
+      background-color: mix(
+        map-get($map: $paleta, $key: negro),
+        $color,
+        80%
+      ); // Oscurecido 80%
+    }
+  }
+} */
