@@ -1,10 +1,14 @@
+@use "../variables" as *; // Asumo que tienes variables definidas
+@use "../colores" as *; // Asumo que tienes una paleta de colores
+@use "breakpoints" as *; // Asumo que tienes mixins de breakpoints
+
 .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
-  background: #333;
-  color: #fff;
+  padding: $padding-base;
+  background: $primary;
+  color: $secondary;
 
   &__logo {
     font-size: 1.5rem;
@@ -13,17 +17,21 @@
 
   &__menu {
     list-style: none;
-    display: flex;
-    gap: 1rem;
+    display: flex; // Menú visible por defecto en escritorio
+    gap: 2rem; // Aumentamos el espacio entre elementos para evitar superposiciones
 
     li {
       position: relative;
 
       a {
-        color: white;
+        color: $secondary;
         text-decoration: none;
-        padding: 0.5rem 1rem;
+        padding: 0.5rem $padding-base;
         display: block;
+
+        &:hover {
+          background: lighten($primary, 10%);
+        }
       }
 
       &:hover ul {
@@ -36,21 +44,31 @@
     ul {
       display: none;
       position: absolute;
-      background: #444;
-      top: 100%;
-      left: 0;
-      min-width: 150px;
+      background: map-get($paleta, "azul-oscuro");
+      top: 100%; // Se coloca justo debajo del elemento "Cuenta"
+      left: 30%; // Centra el submenú bajo "Cuenta"
+      transform: translateX(
+        -50%
+      ); // Ajusta para que esté perfectamente centrado
+      min-width: 150px; // Ancho mínimo, ajusta según necesites
+      white-space: nowrap; // Evita que el texto se divida en varias líneas
+      z-index: 1000; // Asegura que el submenú esté en la capa superior
 
       li {
         a {
-          padding: 0.5rem;
+          padding: 0.5rem $padding-base;
+          color: $secondary;
+
+          &:hover {
+            background: map-get($paleta, "azul-principal");
+          }
         }
       }
     }
   }
 
   &__toggle {
-    display: none;
+    display: none; // Botón oculto por defecto en escritorio
     flex-direction: column;
     gap: 5px;
     background: none;
@@ -60,23 +78,30 @@
     span {
       width: 30px;
       height: 3px;
-      background: white;
+      background: $secondary;
     }
   }
 
-  @media (max-width: 768px) {
+  // Para pantallas menores a 992px (tablet y móvil)
+  @media (max-width: 991.98px) {
     &__menu {
-      display: none;
+      display: none; // Ocultar menú por defecto
       flex-direction: column;
-      background: #333;
+      background: $primary;
       position: absolute;
       top: 60px;
       left: 0;
-      width: 100%;
+      width: 80%;
+      z-index: 1000;
+
+      &.active {
+        display: flex; // Mostrar cuando se activa (clic en hamburguesa)
+        margin-left: $margin-base;
+      }
     }
 
     &__toggle {
-      display: flex;
+      display: flex; // Mostrar botón de hamburguesa
     }
   }
 }

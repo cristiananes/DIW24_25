@@ -1,0 +1,104 @@
+@use "../variables" as *; // Variables como $padding-base, $margin-base
+@use "../colores" as *; // Colores como $primary, $secondary
+@use "breakpoints" as *; // Breakpoints y mixin
+
+// Definimos un mixin para media queries similar al ejemplo
+@mixin media {
+  @include breakpoint(md) {
+    @content;
+  }
+}
+
+.tarjeta-texto {
+  position: relative;
+  height: 400px; // Altura fija solo en pantallas grandes
+  padding: $padding-base;
+  box-sizing: border-box;
+  display: flex;
+  align-items: flex-end;
+  text-decoration: none;
+  border: 4px solid $primary;
+  margin-bottom: $margin-base;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @include media {
+    height: 500px;
+  }
+}
+
+.tarjeta-texto-contenido {
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: $secondary;
+  box-sizing: border-box;
+  padding: $padding-base * 2;
+  overflow-y: auto; // Permitir scroll si el texto es largo
+
+  @include media {
+    width: 50%;
+    height: 100%;
+  }
+
+  .tarjeta-texto-titulo {
+    font-size: 1.5rem;
+    color: map-get($map: $paleta, $key: "gris-oscuro");
+    text-align: center;
+    font-weight: 700;
+    text-shadow: 0px 2px 2px rgba($primary, 0.2);
+    margin: 0 0 $margin-base 0;
+
+    @include media {
+      font-size: 1.875rem;
+    }
+  }
+
+  .tarjeta-texto-subtitulo {
+    color: $primary;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.5; // Mejor legibilidad
+  }
+}
+
+@include breakpoint(md) {
+  .tarjeta-texto {
+    max-width: 350px;
+    height: 450px;
+
+    .tarjeta-texto-titulo {
+      font-size: 1.8rem;
+    }
+
+    .tarjeta-texto-subtitulo {
+      font-size: 1rem;
+    }
+  }
+}
+
+@include breakpoint(sm) {
+  .tarjeta-texto {
+    max-width: 100%; // Ocupar todo el ancho en móvil
+    height: auto; // Altura dinámica para adaptarse al contenido
+    padding: $padding-base / 2; // Reducir padding
+
+    .tarjeta-texto-contenido {
+      height: auto; // Altura dinámica
+      padding: $padding-base; // Reducir padding en móvil
+      min-height: 200px; // Asegurar un mínimo de altura para el diseño
+
+      .tarjeta-texto-titulo {
+        font-size: 1.3rem; // Reducir tamaño del título
+      }
+
+      .tarjeta-texto-subtitulo {
+        font-size: 0.85rem; // Reducir tamaño del texto
+        line-height: 1.4; // Mejor legibilidad
+      }
+    }
+  }
+}

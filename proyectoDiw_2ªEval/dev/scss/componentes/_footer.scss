@@ -1,0 +1,131 @@
+@use "../variables" as *; // Variables como $padding-base, $margin-base
+@use "../colores" as *; // Colores como $primary, $secondary
+@use "breakpoints" as *; // Breakpoints y mixin @include breakpoint
+
+.pie-pagina {
+  background-color: map-get($paleta, "azul-oscuro"); // Fondo oscuro
+  color: $secondary; // Texto claro
+  padding: $padding-base * 2;
+  font-size: 0.9rem;
+
+  .contenedor-pie {
+    display: flex; // Diseño horizontal por defecto
+    justify-content: space-around; // Espaciado uniforme
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: $margin-base * 2; // Espacio entre secciones
+
+    .info-contacto,
+    .redes-sociales,
+    .enlaces-utiles {
+      flex: 1; // Cada sección ocupa un espacio igual
+      min-width: 200px;
+      text-align: center; // Centrar texto
+
+      .titulo-pie {
+        font-size: 1.2rem;
+        margin-bottom: $margin-base;
+        color: $primary;
+      }
+
+      p {
+        margin: $margin-base / 2 0;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+          margin-bottom: $margin-base / 2;
+
+          a {
+            color: $secondary;
+            text-decoration: none;
+            transition: color 0.3s ease;
+
+            &:hover {
+              color: $primary;
+            }
+          }
+        }
+      }
+    }
+
+    .redes-sociales {
+      .lista-redes {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: $margin-base;
+
+        .enlace-red {
+          display: flex;
+          align-items: center;
+
+          i {
+            margin-right: $margin-base / 4;
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+
+  .pie-copyright {
+    text-align: center;
+    padding-top: $padding-base * 2;
+    border-top: 1px solid $secondary;
+    margin-top: $margin-base * 2;
+    font-size: 0.8rem;
+    color: map-get($paleta, "gris-claro");
+  }
+}
+
+// Responsividad
+// A partir de md (tablet), apilar verticalmente
+@include breakpoint(md) {
+  .pie-pagina .contenedor-pie {
+    flex-direction: column;
+    align-items: center;
+
+    .info-contacto,
+    .redes-sociales,
+    .enlaces-utiles {
+      width: 100%; // Ocupar todo el ancho
+    }
+
+    .redes-sociales .lista-redes {
+      flex-direction: row;
+      justify-content: center;
+    }
+  }
+}
+
+// En sm (móvil), ajustar espaciado y apilar iconos
+@include breakpoint(sm) {
+  .pie-pagina {
+    padding: $padding-base;
+
+    .contenedor-pie {
+      gap: $margin-base;
+
+      .titulo-pie {
+        font-size: 1.1rem;
+      }
+
+      .redes-sociales .lista-redes {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  }
+}
+
+// Asegurar diseño horizontal en pantallas grandes (lg y superior)
+@include breakpoint(lg) {
+  .pie-pagina .contenedor-pie {
+    flex-direction: row; // Forzar horizontal en pantallas grandes
+    justify-content: space-around;
+  }
+}

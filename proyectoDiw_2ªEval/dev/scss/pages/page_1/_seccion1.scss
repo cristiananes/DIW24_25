@@ -1,0 +1,77 @@
+@use "../../variables" as *; // Variables como $margin-base, $padding-base
+@use "../../colores" as *; // Colores como $primary, $secondary
+@use "../../componentes/utilidades" as *; // Utilidades personalizadas
+@use "../../componentes/breakpoints" as *; // Breakpoints como md, sm
+
+.seccion-bienvenida {
+  background-image: url("https://brikss-production-imgs.s3.amazonaws.com/publicaciones/imagenes/vivienda_familiar.jpg"); // Cambia esto por tu imagen
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh; // Altura completa de la ventana
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+
+  // Capa oscura para mejorar el contraste del texto
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); // Ajusta la opacidad si lo deseas
+  }
+}
+
+.contenido-bienvenida {
+  position: relative; // Para que esté encima de la capa oscura
+  z-index: 1;
+  color: $secondary; // Color claro para el texto (ej. blanco)
+
+  .titulo-bienvenida {
+    font-size: 3rem; // Tamaño grande para destacar
+    font-weight: bold;
+    margin-bottom: $margin-base; // Espaciado consistente
+  }
+
+  .subtitulo-bienvenida {
+    font-size: 1.5rem;
+    margin-bottom: $margin-base * 2; // Más espacio antes del botón
+  }
+
+  .boton-principal {
+    background-color: $primary; // Color principal (ej. azul o verde)
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.2rem;
+  }
+}
+
+// Estilos responsivos
+@include breakpoint(md) {
+  .titulo-bienvenida {
+    font-size: 2.5rem;
+  }
+  .subtitulo-bienvenida {
+    font-size: 1.2rem;
+  }
+}
+
+@include breakpoint(sm) {
+  .titulo-bienvenida {
+    font-size: 2rem;
+  }
+  .subtitulo-bienvenida {
+    font-size: 1rem;
+  }
+  .boton-principal {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }
+}

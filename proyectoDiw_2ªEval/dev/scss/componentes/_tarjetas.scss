@@ -140,7 +140,7 @@ Colores más oscuros en móviles y más claros en pantallas grandes. */
   background-color: #d35400; /* Naranja más oscuro */
 }
 
-.property-card {
+/* .property-card {
   @include breakpoint(xs) {
     background-color: map-get($paleta, "azul-oscuro");
     color: map-get($paleta, "blanco");
@@ -165,4 +165,4 @@ Colores más oscuros en móviles y más claros en pantallas grandes. */
     background-color: map-get($paleta, "gris-claro");
     color: map-get($paleta, "negro");
   }
-}
+} */

@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const menuHTML = `
+  const menuHTML = `
     <nav class="nav">
       <div class="nav__logo">MiAlquiler</div>
       <button class="nav__toggle" id="menu-toggle">
@@ -23,14 +23,17 @@ document.addEventListener("DOMContentLoaded", () => {
     </nav>
   `;
 
-    // Insertamos el menú en el `<header>`
-    document.querySelector("header").innerHTML = menuHTML;
+  // Insertamos el menú en el `<header>`
+  document.querySelector("header").innerHTML = menuHTML;
 
-    // Funcionalidad del botón hamburguesa
-    const toggleButton = document.getElementById("menu-toggle");
-    const menu = document.querySelector(".nav__menu");
+  // Funcionalidad del botón hamburguesa
+  const toggleButton = document.getElementById("menu-toggle");
+  const menu = document.querySelector(".nav__menu");
 
-    toggleButton.addEventListener("click", () => {
-        menu.classList.toggle("active");
-    });
+  toggleButton.addEventListener("click", () => {
+    console.log("Botón clickeado");
+    document.querySelector(".nav__menu").classList.toggle("active");
+  });
+
+  console.log(document.getElementById("menu-toggle"));
 });

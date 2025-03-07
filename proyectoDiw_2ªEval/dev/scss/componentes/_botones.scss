@@ -1,4 +1,5 @@
 // Importar las variables y colores necesarios
+@use "sass:color";
 @use "../variables" as *;
 @use "../colores" as *;
 @use "../componentes/breakpoints" as *;
@@ -38,7 +39,10 @@
   transition: background-color 0.3s ease;
 
   &:hover {
-    background-color: lighten($color, 10%); // Aclarar el color en hover
+    background-color: color.adjust(
+      $color,
+      $lightness: 10%
+    ); // Aclarar el color en hover
   }
 }
 

@@ -1,0 +1,68 @@
+@use "../../componentes/grid" as *; // Sistema de grid
+@use "../../componentes/tarjetas" as *; // Estilos de tarjetas (usaremos la segunda tarjeta)
+@use "../../variables" as *; // Variables como $margin-base, $padding-base
+@use "../../colores" as *; // Colores como $primary, $secondary
+@use "../../componentes/utilidades" as *; // Utilidades personalizadas
+@use "../../componentes/breakpoints" as *; // Breakpoints como md, sm
+@use "../../componentes/botones" as *; // Breakpoints como md, sm
+
+.seccion-propiedades {
+  padding: $padding-base * 2;
+  background-color: $secondary;
+
+  .titulo-seccion {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: $margin-base * 2;
+    color: $primary;
+  }
+
+  .row {
+    margin: 0 -#{$margin-base / 2};
+  }
+
+  .col-md-4 {
+    padding: 0 #{$margin-base / 2};
+  }
+
+  .property-card {
+    // Ya tiene estilos definidos en _tarjetas.scss, pero podemos añadir ajustes
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Sombra adicional si lo deseas
+    transition: transform 0.3s ease; // Efecto hover
+
+    &:hover {
+      transform: scale(1.02); // Efecto de aumento al pasar el ratón
+    }
+
+    .property-card-img {
+      height: 200px; // Asegura una altura fija para las imágenes
+    }
+
+    .property-card-body {
+      padding: $padding-base;
+
+      .property-title {
+        font-size: 1.5rem;
+        margin-bottom: $margin-base / 2;
+      }
+
+      .property-price {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: $success; // Asegura que el precio use un color verde
+      }
+
+      .property-description {
+        font-size: 1rem;
+        color: map-get($paleta, "gris-oscuro");
+        margin-bottom: $margin-base;
+      }
+
+      .property-btn {
+        @include boton-estilo($primary); // Usa el mixin de tu biblioteca
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+}
