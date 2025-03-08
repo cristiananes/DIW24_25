@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MiAlquiler - Búsqueda de Alquileres</title>
+    <link rel="stylesheet" href="css/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- Menú de navegación (inyectado por JS) -->
+    <header id="menu-nav"></header>
+
+    <main>
+      <!-- Filtro de búsqueda -->
+      <section class="seccion-filtro-busqueda">
+        <div class="contenedor-filtro">
+          <h2 class="titulo-seccion">Busca tu alquiler</h2>
+          <form id="filtro-busqueda">
+            <div class="filtro-grupo">
+              <label for="ciudad">Ciudad:</label>
+              <input
+                type="text"
+                id="ciudad"
+                name="ciudad"
+                placeholder="Ej. Madrid"
+              />
+            </div>
+            <div class="filtro-grupo">
+              <label for="precio">Precio máximo:</label>
+              <input
+                type="number"
+                id="precio"
+                name="precio"
+                placeholder="Ej. 1500"
+              />
+            </div>
+            <div class="filtro-grupo">
+              <label for="tipo">Tipo:</label>
+              <select id="tipo" name="tipo">
+                <option value="">Selecciona</option>
+                <option value="casa">Casa</option>
+                <option value="apartamento">Apartamento</option>
+              </select>
+            </div>
+            <button type="submit" class="boton boton-principal">Buscar</button>
+          </form>
+        </div>
+      </section>
+
+      <!-- Resultados de búsqueda -->
+      <section class="seccion-resultados-busqueda">
+        <h2 class="titulo-seccion">Propiedades encontradas</h2>
+        <div class="contenedor-resultados" id="resultados-busqueda">
+          <!-- Tarjetas de propiedades se inyectarán aquí dinámicamente -->
+        </div>
+      </section>
+
+      <!-- Formulario de contacto modal -->
+      <!-- El modal se creará dinámicamente con JS -->
+      <div id="modal-contacto"></div>
+
+      <!-- Consejos para alquilar -->
+      <section class="seccion-consejos-alquiler">
+        <h2 class="titulo-seccion">Consejos para alquilar</h2>
+        <div class="contenedor-consejos">
+          <div class="consejo-item">
+            <h3>Evalúa la propiedad</h3>
+            <p>Revisa el estado de la vivienda antes de firmar el contrato.</p>
+          </div>
+          <div class="consejo-item">
+            <h3>Documentación necesaria</h3>
+            <p>Asegúrate de tener tu DNI y referencias bancarias.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer (inyectado por JS) -->
+    <footer id="pie-pagina"></footer>
+
+    <script src="js/menu.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/busquedaAlquileres.js"></script>
+  </body>
+</html>

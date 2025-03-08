@@ -1,0 +1,64 @@
+@use "../../colores" as *;
+@use "../../variables" as *;
+@use "../../componentes/breakpoints" as *;
+.seccion-filtro-busqueda {
+  padding: $padding-base * 2;
+  background-color: map-get($paleta, "gris-claro");
+
+  .titulo-seccion {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: $margin-base * 2;
+    color: $primary;
+  }
+
+  .contenedor-filtro {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: $padding-base;
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: $margin-base;
+
+      .filtro-grupo {
+        display: flex;
+        flex-direction: column;
+
+        label {
+          font-weight: 600;
+          margin-bottom: $margin-base / 2;
+        }
+
+        input,
+        select {
+          padding: $padding-base / 2;
+          border: 1px solid $secondary;
+          border-radius: 4px;
+        }
+
+        button {
+          padding: $padding-base;
+          background-color: $primary;
+          color: map-get($map: $paleta, $key: "blanco");
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+
+          &:hover {
+            background-color: darken($primary, 10%);
+          }
+        }
+      }
+    }
+  }
+
+  @include breakpoint(sm) {
+    padding: $padding-base;
+
+    .titulo-seccion {
+      font-size: 2rem;
+    }
+  }
+}

@@ -2583,5 +2583,229 @@ Colores más oscuros en móviles y más claros en pantallas grandes. */
     justify-content: space-around;
   }
 }
+#modal-contacto {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+#modal-contacto.active {
+  display: block;
+}
+#modal-contacto .modal-contenido {
+  background: #ffffff;
+  width: 90%;
+  max-width: 500px;
+  margin: 10% auto;
+  padding: 2rem;
+  border-radius: 8px;
+  position: relative;
+}
+#modal-contacto .modal-contenido h3 {
+  text-align: center;
+  color: #3498db;
+  margin-bottom: 1rem;
+}
+#modal-contacto .modal-contenido form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+#modal-contacto .modal-contenido form .form-grupo {
+  display: flex;
+  flex-direction: column;
+}
+#modal-contacto .modal-contenido form .form-grupo label {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+#modal-contacto .modal-contenido form .form-grupo input,
+#modal-contacto .modal-contenido form .form-grupo textarea {
+  padding: 0.5rem;
+  border: 1px solid #ecf0f1;
+  border-radius: 4px;
+}
+#modal-contacto .modal-contenido form .form-grupo button {
+  padding: 1rem;
+  background-color: #3498db;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+#modal-contacto .modal-contenido form .form-grupo button:hover {
+  background-color: rgb(33.1380753138, 125.1882845188, 186.8619246862);
+}
+#modal-contacto .modal-contenido form .cerrar-modal {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #ecf0f1;
+}
+#modal-contacto .modal-contenido form .cerrar-modal:hover {
+  color: #3498db;
+}
+
+.seccion-consejos-alquiler {
+  padding: 2rem;
+  background-color: #ecf0f1;
+}
+.seccion-consejos-alquiler .titulo-seccion {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #3498db;
+}
+.seccion-consejos-alquiler .contenedor-consejos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+.seccion-consejos-alquiler .contenedor-consejos .consejo-item {
+  background: #ffffff;
+  padding: 1rem;
+  border: 2px solid #3498db;
+  border-radius: 4px;
+  text-align: center;
+}
+.seccion-consejos-alquiler .contenedor-consejos .consejo-item h3 {
+  font-size: 1.2rem;
+  color: #3498db;
+  margin-bottom: 0.5rem;
+}
+.seccion-consejos-alquiler .contenedor-consejos .consejo-item p {
+  font-size: 0.9rem;
+}
+@media (min-width: 576px) {
+  .seccion-consejos-alquiler {
+    padding: 1rem;
+  }
+  .seccion-consejos-alquiler .titulo-seccion {
+    font-size: 2rem;
+  }
+}
+
+.seccion-filtro-busqueda {
+  padding: 2rem;
+  background-color: #ecf0f1;
+}
+.seccion-filtro-busqueda .titulo-seccion {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #3498db;
+}
+.seccion-filtro-busqueda .contenedor-filtro {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+.seccion-filtro-busqueda .contenedor-filtro form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.seccion-filtro-busqueda .contenedor-filtro form .filtro-grupo {
+  display: flex;
+  flex-direction: column;
+}
+.seccion-filtro-busqueda .contenedor-filtro form .filtro-grupo label {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.seccion-filtro-busqueda .contenedor-filtro form .filtro-grupo input,
+.seccion-filtro-busqueda .contenedor-filtro form .filtro-grupo select {
+  padding: 0.5rem;
+  border: 1px solid #ecf0f1;
+  border-radius: 4px;
+}
+.seccion-filtro-busqueda .contenedor-filtro form .filtro-grupo button {
+  padding: 1rem;
+  background-color: #3498db;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.seccion-filtro-busqueda .contenedor-filtro form .filtro-grupo button:hover {
+  background-color: rgb(33.1380753138, 125.1882845188, 186.8619246862);
+}
+@media (min-width: 576px) {
+  .seccion-filtro-busqueda {
+    padding: 1rem;
+  }
+  .seccion-filtro-busqueda .titulo-seccion {
+    font-size: 2rem;
+  }
+}
+
+.seccion-resultados-busqueda {
+  padding: 2rem;
+  background-color: #ffffff;
+}
+.seccion-resultados-busqueda .titulo-seccion {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #3498db;
+}
+.seccion-resultados-busqueda .contenedor-resultados {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+.seccion-resultados-busqueda .contenedor-resultados .property-card {
+  position: relative;
+  overflow: hidden;
+  border: 2px solid #3498db;
+}
+.seccion-resultados-busqueda .contenedor-resultados .property-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.seccion-resultados-busqueda .contenedor-resultados .property-card .property-card-body {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(236, 240, 241, 0.8);
+  color: #ffffff;
+  padding: 1rem;
+  transform: translateY(0);
+}
+.seccion-resultados-busqueda .contenedor-resultados .property-card .property-card-body h3 {
+  margin: 0 0 0.5rem 0;
+}
+.seccion-resultados-busqueda .contenedor-resultados .property-card .property-card-body p {
+  margin: 0;
+}
+.seccion-resultados-busqueda .contenedor-resultados .property-card .property-card-body a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: #3498db;
+  text-decoration: none;
+  font-weight: 600;
+}
+.seccion-resultados-busqueda .contenedor-resultados .property-card .property-card-body a:hover {
+  text-decoration: underline;
+  color: rgb(33.1380753138, 125.1882845188, 186.8619246862);
+}
+@media (min-width: 576px) {
+  .seccion-resultados-busqueda {
+    padding: 1rem;
+  }
+  .seccion-resultados-busqueda .titulo-seccion {
+    font-size: 2rem;
+  }
+}
 
 /*# sourceMappingURL=index.css.map */
