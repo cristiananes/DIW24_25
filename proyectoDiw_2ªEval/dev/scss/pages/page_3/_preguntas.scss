@@ -1,0 +1,48 @@
+@use "../../colores" as *;
+@use "../../variables" as *;
+@use "../../componentes/breakpoints" as *;
+.seccion-preguntas-frecuentes {
+  padding: $padding-base * 2;
+  background-color: map-get($paleta, "gris-claro");
+
+  .titulo-seccion {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: $margin-base * 2;
+    color: $primary;
+  }
+
+  .contenedor-preguntas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: $margin-base;
+    padding: $padding-base;
+
+    .pregunta-item {
+      background: map-get($paleta, "blanco");
+      padding: $padding-base;
+      border: 2px solid $primary;
+      border-radius: 4px;
+      text-align: center;
+
+      h3 {
+        font-size: 1.2rem;
+        color: $primary;
+        margin-bottom: $margin-base / 2;
+      }
+
+      p {
+        font-size: 0.9rem;
+        color: map-get($paleta, "gris-oscuro");
+      }
+    }
+  }
+
+  @include breakpoint(sm) {
+    padding: $padding-base;
+
+    .titulo-seccion {
+      font-size: 2rem;
+    }
+  }
+}

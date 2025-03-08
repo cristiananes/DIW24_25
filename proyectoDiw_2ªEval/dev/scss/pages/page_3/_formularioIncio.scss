@@ -1,0 +1,78 @@
+@use "../../colores" as *;
+@use "../../variables" as *;
+@use "../../componentes/breakpoints" as *;
+.seccion-inicio-sesion {
+  padding: $padding-base * 2;
+  background-color: map-get($paleta, "gris-claro");
+
+  .titulo-seccion {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: $margin-base * 2;
+    color: $primary;
+  }
+
+  .contenedor-inicio-sesion {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: $padding-base;
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: $margin-base;
+
+      .form-grupo {
+        display: flex;
+        flex-direction: column;
+
+        label {
+          font-weight: 600;
+          margin-bottom: $margin-base / 2;
+        }
+
+        input {
+          padding: $padding-base / 2;
+          border: 1px solid $secondary;
+          border-radius: 4px;
+        }
+
+        button {
+          padding: $padding-base;
+          background-color: $primary;
+          color: map-get($paleta, "blanco");
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+
+          &:hover {
+            background-color: darken($primary, 10%);
+          }
+        }
+      }
+
+      .registro-link {
+        text-align: center;
+        margin-top: $margin-base;
+        font-size: 0.9rem;
+
+        a {
+          color: $primary;
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+  @include breakpoint(sm) {
+    padding: $padding-base;
+
+    .titulo-seccion {
+      font-size: 2rem;
+    }
+  }
+}
